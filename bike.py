@@ -153,7 +153,7 @@ grid.best_estimator_
 
 xgb_best.fit( train_X , train_y )
 xgb_best.score(test_X , test_y )
-print(gbr_best.score(test_X , test_y))
+print(xgb_best.score(test_X , test_y))
 
 xgb_param =xgb_best.get_xgb_params()
 xgb.cv(xgb_param, xgtrain, num_boost_round=5000, nfold=15, metrics=['auc'],
